@@ -25,15 +25,38 @@ public class main {
         
        cliente1.nombre = JOptionPane.showInputDialog(null, "Ingrese el nombre");
        cliente1.apellido = JOptionPane.showInputDialog(null, "Ingrese el Apellido");
-       cliente1.numArticulosCarro = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese el numero de articulos"));
+       //cliente1.numArticulosCarro = Integer.parseInt(JOptionPane.showInputDialog
+       // (null, "Ingrese el numero de articulos"));
  
        
-       JOptionPane.showMessageDialog(null," Su compra " +cliente1.nombre + " " + cliente1.apellido +" fue del numero de articulos " 
-               + cliente1.numArticulosCarro + " Quedaron en el invetario: " + cliente1.comprar(cliente1.numArticulosCarro,inventario1.numeroArticulos) );
+       //JOptionPane.showMessageDialog(null," Su compra " +cliente1.nombre + " " +
+           //    cliente1.apellido +" fue del numero de articulos " 
+             //  + cliente1.numArticulosCarro + " Quedaron en el invetario: " + 
+             //  cliente1.comprar(cliente1.numArticulosCarro,inventario1.numeroArticulos) );
        
-       cliente1.solicitarDomicilio = JOptionPane.showInputDialog(null, "Ingrese (si) si desea el domicilio");
+       
+       int numArticulos = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese el numero de articulos"));
+       String nombreArticulo = JOptionPane.showInputDialog(null, "Ingrese el nombre");
+       for(int i=0; i< numArticulos;i++){
+         inventario1.articulos[i]=nombreArticulo;
+         inventario1.cantidadArticulos[i]= numArticulos;
+         JOptionPane.showMessageDialog(null, "Se agrego el producto " + nombreArticulo + " con la cantidad: " + numArticulos);
+       }
+       
+       ////clases, array, funciones.
+       
+       
+    
+     
+
+       cliente1.solicitarDomicilio = JOptionPane.showInputDialog(null, "Ingrese "
+               + "(si) si desea el domicilio");
        boolean estado = cliente1.domicilio(cliente1.solicitarDomicilio);
        domicilario1.estado = estado;
+       
+      
+      
+       
 
        if(estado == true){
        JOptionPane.showMessageDialog(null, "El domiciliario va en camino");

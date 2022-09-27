@@ -9,6 +9,8 @@ package EAN.sistemaDomicilio.com;
  * @author SALA
  */
 public class inventario {
-    int numeroArticulos = 1000;
+    int numeroArticulos = 0;
+    String articulos[];
+    int cantidadArticulos[];
     
 }

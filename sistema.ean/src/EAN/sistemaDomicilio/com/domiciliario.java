@@ -9,9 +9,11 @@ package EAN.sistemaDomicilio.com;
  * @author SALA
  */
 public class domiciliario {
-    String moto;
+    String placaMoto;
     String nombre;
     boolean estado;
+    
+    
     
       
 }
